@@ -1,12 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-// declaro o path que é utilizado para caminhos na minha aplicação
 const path = require('path');
+
+const socketio = require('socket.io');
+const http = require('http');
+
 
 const routes = require('./routes');
 
 const app = express();
+const server = http.Server(app);
 
 mongoose.connect('mongodb+srv://aircncjorge:aircncjorge@aircnc-4stg0.mongodb.net/appaircnc?retryWrites=true&w=majority', {
   useNewUrlParser: true,
