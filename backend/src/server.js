@@ -10,7 +10,6 @@ const http = require('http');
 const routes = require('./routes');
 
 const app = express();
-const server = http.Server(app);
 
 mongoose.connect('mongodb+srv://aircncjorge:aircncjorge@aircnc-4stg0.mongodb.net/appaircnc?retryWrites=true&w=majority', {
   useNewUrlParser: true,
